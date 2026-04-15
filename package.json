@@ -1,7 +1,7 @@
 {
   "name": "bundle-image-cropper",
   "version": "1.0.0",
-  "description": "On-the-fly image cropper for Shopify bundle customization images (left/right focus).",
+  "description": "Image cropper with Cloudflare R2 storage",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
     "dev": "node --watch server.js"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.772.0",
     "axios": "^1.7.9",
     "express": "^4.19.2",
     "helmet": "^7.1.0",
