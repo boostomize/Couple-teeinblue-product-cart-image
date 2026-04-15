@@ -2,6 +2,7 @@ import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 import crypto from "crypto";
+import cors from "cors";
 import { S3Client, PutObjectCommand, GetObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
 
 import { fetchAndCrop } from "./src/cropper.js";
