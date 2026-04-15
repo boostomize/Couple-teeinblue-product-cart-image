@@ -18,6 +18,11 @@ app.use(
 
 app.use(morgan("combined"));
 
+app.use(cors({
+  origin: "*",
+  methods: ["GET"],
+}));
+
 const BASE_URL =
   process.env.PUBLIC_BASE_URL || "https://img.boostomize.de";
 
