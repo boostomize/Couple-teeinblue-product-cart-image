@@ -25,7 +25,12 @@ export async function fetchAndCrop({ src, focus, width, height, cutPercent, zoom
     timeout: FETCH_TIMEOUT_MS,
     maxContentLength: MAX_IMAGE_BYTES,
     maxBodyLength: MAX_IMAGE_BYTES,
-    validateStatus: (s) => s >= 200 && s < 300
+    validateStatus: (s) => s >= 200 && s < 300,
+    headers: {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "Referer": "https://cdn.teeinblue.com/",
+      "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
+    }
   });
 
   const input = Buffer.from(resp.data);
